@@ -1,0 +1,263 @@
+<!--
+	Traveler by freehtml5.co
+	Twitter: http://twitter.com/fh5co
+	URL: http://freehtml5.co
+-->
+{% extends  'base.html ' %}
+
+{% block head %}
+<title>ImagePlus</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+    <!-- <div class="page-inner"> -->
+    <nav class="gtco-nav" role="navigation">
+        <div class="gtco-container">
+
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <div id="gtco-logo"><a href="index.html">Image Plus <em>.</em></a></div>
+                </div>
+                <div class="col-xs-8 text-right menu-1">
+                    <ul>
+                        <li><a href="destination.html">Home</a></li>
+                        <li class="has-dropdown">
+                            <a href="#">Tools & Api</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Tools</a></li>
+                                <li><a href="#">Api</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="pricing.html">How To Use</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner"
+            style="background-image: url(static/images/pic_adv.jpg)">
+        <div class="overlay"></div>
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0 text-left">
+                    <div class="row row-mt-15em">
+                        <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+                            <h1>AI Powered Image Editor</h1>
+                        </div>
+                        <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+                            <div class="form-wrap">
+                                <div class="tab">
+
+                                    <div class="tab-content">
+                                        <div class="tab-content-inner active" data-content="signup">
+                                            <h3>What will you like to do?</h3>
+                                            <ul class="list-group">
+                                                <li class="list-group-item active">Image Blending</li>
+                                                <li class="list-group-item">Change Background</li>
+                                                <li class="list-group-item">Generate Images</li>
+                                                <li class="list-group-item">Image Segmentation</li>
+                                                <li class="list-group-item">Object Detection</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="gtco-subscribe">
+        <div class="gtco-container">
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                    <p>Upload image(s)</p>
+                        <input type="file" id="input-file-max-fs" class="file-upload" data-max-file-size="2M"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gtco-section">
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                    <h2>Result of the Operation</h2>
+                    <p>Below are the results of the operation.</p>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="images/img_1.jpg" class="fh5co-card-item image-popup">
+                        <figure>
+                            <div class="overlay"><i class="ti-plus"></i></div>
+                            <img src="static/images/img_1.jpg" alt="Image" class="img-responsive">
+                        </figure>
+                        <div class="fh5co-text">
+                            <h2>Result One</h2>
+                            <p>The first result of the operation</p>
+                            <p><span class="btn btn-primary">Download</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="images/img_2.jpg" class="fh5co-card-item image-popup">
+                        <figure>
+                            <div class="overlay"><i class="ti-plus"></i></div>
+                            <img src="static/images/img_2.jpg" alt="Image" class="img-responsive">
+                        </figure>
+                        <div class="fh5co-text">
+                            <h2>Result Second</h2>
+                            <p>The Second result of the operation</p>
+                            <p><span class="btn btn-primary">Download</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <a href="images/img_3.jpg" class="fh5co-card-item image-popup">
+                        <figure>
+                            <div class="overlay"><i class="ti-plus"></i></div>
+                            <img src="static/images/img_3.jpg" alt="Image" class="img-responsive">
+                        </figure>
+                        <div class="fh5co-text">
+                            <h2>Result Three</h2>
+                            <p>The third result of the operation</p>
+                            <p><span class="btn btn-primary">Download</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gtco-features">
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+                    <h2>How It Works</h2>
+                    <p>Select an operation to perform.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i>1</i>
+						</span>
+                        <h3>Step one</h3>
+                        <p>Select an Operation to Perform
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i>2</i>
+						</span>
+                        <h3>Step Two</h3>
+                        <p>Drag and Drop the image.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i>3</i>
+						</span>
+                        <h3>Step Three</h3>
+                        <p>Download the image result.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer id="gtco-footer" role="contentinfo">
+        <div class="gtco-container">
+            <div class="row row-p	b-md">
+
+                <div class="col-md-4">
+                    <div class="gtco-widget">
+                        <h3>About Us</h3>
+                        <p>Image Plus is an image editing platform that allows you to add
+                            variant and tweak images as you wish with our AI powered algorithms </p>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-md-push-1">
+                    <div class="gtco-widget">
+                        <h3>Features</h3>
+                        <ul class="gtco-footer-links">
+                            <li><a href="#">Image Cropping</a></li>
+                            <li><a href="#">Image Resizing</a></li>
+                            <li><a href="#">Image Blending</a></li>
+                            <li><a href="#">Image Stitching</a></li>
+                            <li><a href="#">Image Segmentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-md-push-1">
+                    <div class="gtco-widget">
+                        <h3>Others</h3>
+                        <ul class="gtco-footer-links">
+                            <li><a href="#">Change Background</a></li>
+                            <li><a href="#">Object Detection</a></li>
+                            <li><a href="#">Style Transfer</a></li>
+                            <li><a href="#"> Face Morphing</a></li>
+                            <li><a href="#">Photo Mosaic</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-md-push-1">
+                    <div class="gtco-widget">
+                        <h3>Get In Touch</h3>
+                        <ul class="gtco-quick-contact">
+                            <li><a href="#"><i class="icon-phone"></i> +234 814 675 325</a></li>
+                            <li><a href="#"><i class="icon-mail2"></i>banjodayo39@gmail.com</a></li>
+                            <li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row copyright">
+                <div class="col-md-12">
+                    <p class="pull-left">
+                        <small class="block">&copy; 2020 Image Plus. All Rights Reserved.</small>
+                    </p>
+                    <p class="pull-right">
+                    <ul class="gtco-social-icons pull-right">
+                        <li><a href="#"><i class="icon-twitter"></i></a></li>
+                        <li><a href="#"><i class="icon-facebook"></i></a></li>
+                        <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                        <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- </div> -->
+
+</div>
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>
+{% endblock %}
+
