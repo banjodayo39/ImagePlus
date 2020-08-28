@@ -78,11 +78,17 @@
 
     <div id="gtco-subscribe">
         <div class="gtco-container">
-            <div class="row animate-box">
-                <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-                    <p>Upload image(s)</p>
-                        <input type="file" id="input-file-max-fs" class="file-upload" data-max-file-size="2M"/>
-                </div>
+            <div class="row animate-box " >
+                <h5>Upload image(s)</h5>
+                <form id="upload-form" action="{{url_for('upload')}}" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" name="image" id="image" accept="image/*"
+                                   multiple/>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
         </div>
     </div>
