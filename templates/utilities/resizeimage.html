@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>IMAGEPLUS - Resize Image</title>
+{% endblock %}
+{% block body %}
+{% include 'navbar.html' %}
+
+<section class="resize-img">
+    <div class="container">
+        <form method="post" enctype="multipart/form-data" novalidate="" class="box  my-5 py-5 has-advanced-upload">
+            <div class="box-input">
+              
+                <div class="upload-img-icon"><i class="bx bx-cloud-upload"></i></div>
+              <input type="file" name="files[]" id="file" class="box-file" data-multiple-caption="{count} files selected" multiple="">
+              <label for="file"><strong>Choose a file</strong><span class="box-dragndrop"> or drag it here</span>.</label>
+              <button type="submit" class="btn site-btn my-3">Upload</button>
+            </div>
+        
+    </div>
+</section>
+
+{% include 'footer.html' %}
+{% endblock %}
