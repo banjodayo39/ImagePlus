@@ -1,14 +1,4 @@
-{% extends 'base.html' %}
-
-{% block title %}
-    <title>IMAGEPLUS - Features</title>
-{% endblock %}
-
-{% block body %}
-
-{% include 'navbar.html' %}
-
-<section class="features">
+<section class="features" id="features">
     <div class="container">
 
         <div class="feature-title my-5">
@@ -17,7 +7,7 @@
         </div>
 
         <div class="row my-3">
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100" onclick="window.open('/resize-img')">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100" onclick="window.open('/upload-img')">
             <div class="feature-box">
             <div class="icon"><i class="bx bx-selection"></i></div>
             <h4 class="title"><a href="">Image Resizing</a></h4>
@@ -91,9 +81,3 @@
 
     </div>
 </section>
-
-
-{% include 'footer.html' %}
-
-
-{% endblock %}
