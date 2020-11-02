@@ -285,6 +285,7 @@
 	};
 
 
+
 	
 	$(function(){
 		mobileMenuOutsideClick();
@@ -299,6 +300,7 @@
 		counterWayPoint();
 		dateForm();
 		parallax();
+
 	});
 
 

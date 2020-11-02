@@ -1,9 +1,12 @@
 import os
 import urllib.request
 from flask import Flask, flash, request, redirect, url_for, render_template
+from PIL import Image
 from werkzeug.utils import secure_filename
 import cv2
 import numpy as np
+from features import basic
+
 UPLOAD_FOLDER = 'static/images/'
 
 app = Flask(__name__)
@@ -25,11 +28,12 @@ def index():
 def features():
     return render_template('features.html')
 
+
 @app.route('/upload-image', methods=['GET', 'POST'])
 def upload():
     if request.method == "POST":
         if request.files:
-            file = request.files['file']
+            file = request.files['image']
             if file.filename == '':
                 flash('No image selected for uploading')
                 return redirect(request.url)
@@ -44,17 +48,40 @@ def upload():
                 img = cv2.imread(f)
                 if img is not None:
                     print(img)
-                    # Convert image to grayscale:
-                    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-                    # Perform canny edge detection:
-                    edges = cv2.Canny(gray, 100, 200)
+                    edges = basic.pencil_sketch(img)
                     new_filename = os.path.join(app.config['UPLOAD_FOLDER'], filename)
                     cv2.imwrite(new_filename, edges)
                     return render_template('./utilities/upload.html', filename=filename)
                 else:
                     print("THis guy is none")    
     return render_template('./utilities/upload.html')
-           
+'''
+@app.route("/predict", methods=["POST"])
+def predict():
+    # Initialize result:
+    result = {"success": False}
+    if flask.request.method == "POST":
+        if flask.request.files.get("image"):
+            # Read input image in PIL format:
+            image = flask.request.files["image"].read()
+            image = Image.open(io.BytesIO(image))
+            # Pre-process the image to be classified:
+            image = preprocessing_image(image, target=(224, 224))
+            # Classify the input image:
+            with graph.as_default():
+            predictions = model.predict(image)
+            results = imagenet_utils.decode_predictions(predictions)
+            result["predictions"] = []
+            # Add the predictions to the result:
+            for (imagenet_id, label, prob) in results[0]:
+            r = {"label": label, "probability": float(prob)}
+            result["predictions"].append(r)
+            # At this point we can say that the request was dispatched successfully:
+            result["success"] = True
+            # Return result as a JSON response:
+    return flask.jsonify(result)    
+'''
+
 @app.route('/upload-img')
 def resizeimg():
     return render_template('./utilities/upload.html')
