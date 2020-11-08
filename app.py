@@ -3,7 +3,6 @@ import urllib.request
 from flask import Flask, flash, request, redirect, url_for, render_template
 from PIL import Image
 from werkzeug.utils import secure_filename
-import cv2
 import numpy as np
 from features import basic
 
