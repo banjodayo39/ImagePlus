@@ -5,7 +5,6 @@ from PIL import Image
 from werkzeug.utils import secure_filename
 import numpy as np
 import cv2
-from features import basic
 
 UPLOAD_FOLDER = 'static/images/'
 
@@ -50,7 +49,7 @@ def upload(feature):
                 if img is not None:
                     print(img)
                     if feature == 'resize':
-                        edges = basic.pencil_sketch(img)
+                        #edges = basic.pencil_sketch(img)
                         new_filename = os.path.join(app.config['UPLOAD_FOLDER'], filename)
                         cv2.imwrite(new_filename, edges)
                     return render_template('./utilities/upload.html', filename=filename)
