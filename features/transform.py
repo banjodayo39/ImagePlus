@@ -1,7 +1,4 @@
-from PIL import Image
-import cv2
-import scipy.ndimage
-import numpy as np
+
 
 def v_concat(img):
     img_v = cv2.vconcat([img, img])

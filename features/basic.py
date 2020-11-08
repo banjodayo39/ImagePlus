@@ -1,4 +1,4 @@
-
+'''
 def resize(src, scale=0.5):
     width = int(src.shape[1] * scale)
     height = int(src.shape[0] * scale)
@@ -55,3 +55,4 @@ def img_to_sketch(img):
     img2 = image_to_sketch(img)
     composite_img = (img1/2) + (img2/2)
     return composite_img 
+    '''
