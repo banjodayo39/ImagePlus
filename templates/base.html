@@ -1,29 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="ImagePlus is an online Artificial intelligence driven image processing application">
-    <meta name="keywords" content="ImagePlus, AI, Image processing, Image editing">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon -->
-	<link href="static/assets//images/photo.ico" rel="shortcut icon"/>
-
-	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
- 
-	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
- 
-    <!-- Slider -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>    
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="static/assets/css/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="static/assets/css/slicknav.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-	<!-- Main Stylesheets -->
-	<link rel="stylesheet" href="static/assets/css/style.css"/>
+    	<!-- Required meta tags --> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="static/vendors/mdi/css/materialdesignicons.min.css">
+		<link rel="stylesheet" href="static/vendors/owl.carousel/css/owl.carousel.css">
+		<link rel="stylesheet" href="static/vendors/owl.carousel/css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="static/vendors/aos/css/aos.css">
+		<link rel="stylesheet" href="static/vendors/jquery-flipster/css/jquery.flipster.css">
+		<link rel="stylesheet" href="static/css/style.css">
+		<link rel="shortcut icon" href="static/images/logo.png">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css')}}">
     {% block title %}
 
     {% endblock %}
@@ -34,15 +22,12 @@
     {% block body %}
 
     {% endblock %}
+    <script src="static/vendors/base/vendor.bundle.base.js"></script>
+<script src="static/vendors/owl.carousel/js/owl.carousel.js"></script>
+<script src="static/vendors/aos/js/aos.js"></script>
+<script src="static/vendors/jquery-flipster/js/jquery.flipster.min.js"></script>
+<script src="static/js/template.js"></script>
+<script href="https://100dayscss.com/codepen/js/jquery.min.js"/>
 
-    <!--====== Javascripts & Jquery ======-->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script src="static/assets/js/jquery.slicknav.min.js"></script>
-	<script src="static/assets/js/owl.carousel.min.js"></script>
-	<script src="static/assets/js/mixitup.min.js"></script>
-    <!-- Main Javascript file -->
-    <script src="static/assets/js/main.js"></script>
 </body>
 </html>

@@ -3,128 +3,173 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    <title>ImagePlus</title>
+    <title>imageplus</title>
 {% endblock %}
 
 {% block body %}
 
-{% include 'navbar.html' %}
+<!-- ======= Body Section ======= -->
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<div id="mobile-menu-overlay"></div>
+	<nav class="navbar navbar-expand-lg fixed-top nav-header" style="background-color: #fff">
+		<div class="container">
+			<a class="navbar-brand" href="#"><img src="static/images/logo.png" alt="Marshmallow"></a>
+			<button class="navbar-toggler" style="background-color: #3c37f1"  type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"><i class="mdi mdi-menu"> </i></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+				<div class="d-lg-none d-flex justify-content-between px-4 py-3 align-items-center">
+					<img src="static/images/logo.png" class="logo-mobile-menu" alt="logo">
+					<a href="javascript:;" class="close-menu"><i class="mdi mdi-close"></i></a>
+				</div>
+				<ul class="navbar-nav ml-auto align-items-center">
+					<li class="nav-item active">
+						<a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#testimonial">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#plans">API</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link btn btn-primary" href="https://wa.me/2349023046356?text=I'm%20interested%20in%20imageplus%20for%20service">
+							<img src="static/images/whatsapp.svg" />
 
-<!-- ======= Intro Section ======= -->
-<section id="hero" class="d-flex align-items-center">
+							+234-902-304-6356</a>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
-          <h1>ImagePlus is an AI-driven image processing application suited for all your needs</h1>
-          <h2 class="my-3"></h2>
-          <a href="#about" class="btn-get-started scrollto">Get Started  <span class="fa fa-arrow-right"></span></a>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img">
-          <img src="static/assets/images/hero-img.svg" class="img-fluid animated" alt="">
-        </div>
-      </div>
-    </div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="page-body-wrapper">
+	
+		<section class="our-process" id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6" data-aos="fade-up">
+					   <!--<h3 class="font-weight-medium text-dark">imagePlus, process your image</h3>-->
+					   
+					   <div class="container">
+						<p class="font-weight-medium mb-4"> <br/>
+							<br/>
+							   <t/>Explore unlimited Image processing <br/>
+							 possibilities with image plus
+						</p>
+						<a href="#testimonial" class="btn btn-primary">Get Started</a>
+					   </div>
+	
+					</div>
+					<div class="col-sm-6 text-right" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+						<img src="static/images/creating-film.jpg" alt="idea" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</section> 
+		
+		<section class="testimonial" id="testimonial">
+			<div class="container">
+				<div class="row  mt-md-0 mt-lg-4">
+					<div class="col-sm-6 text-white" data-aos="fade-up">
+						<p class="font-weight-bold mb-3">Features</p>
+						<h3 class="font-weight-medium">Click on a feature<br>to try out</h3>
+						<ul class="flipster-custom-nav">
+							<li class="flipster-custom-nav-item">
+								<a href="javascript:;" class="flipster-custom-nav-link" title="0"></a>
+							</li>
+							<li class="flipster-custom-nav-item">
+								<a href="javascript:;" class="flipster-custom-nav-link"  title="1"></a>
+							</li>
+							<li class="flipster-custom-nav-item">
+								<a href="javascript:;" class="flipster-custom-nav-link active" title="2"></a>
+							</li>
+							<li class="flipster-custom-nav-item">
+								<a href="javascript:;" class="flipster-custom-nav-link"  title="3"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-sm-6" data-aos="fade-up">
+						<div id="testimonial-flipster">
+							<ul>
+								<li>
+									<div class="testimonial-item">
+										<img src="static/images/testimonial/change-background.svg" alt="icon" class="testimonial-icons">
+										<p>Switch image background automatically using accurate AI-based Image segmentation.</p>
+										<h6 class="testimonial-author">Change Background</h6>
+										<a href="#" class="btn btn-outline-primary"> Try now</a>
+									</div>
+								</li>
+								<li>
+									<div class="testimonial-item">
+										<img src="static/images/testimonial/magic-wand.svg" alt="icon" class="testimonial-icons">
+										<p>Enhaunce quality by reducing noise, sharpening, improving constrast and brightness</p>
+										<h6 class="testimonial-author">Image Enhaucement</h6>
+										<a href="#" class="btn btn-outline-primary"> Try now</a>
+									</div>
+								</li>
+								<li>
+									<div class="testimonial-item">
+										<img src="static/images/testimonial/resize.svg" alt="icon" class="testimonial-icons">
+										<p>Resize your image to a specific height and width</p>
+										<h6 class="testimonial-author">Image Resizing</h6>
+										<a href="/upload-image/{{ 'resize' }}" class="btn btn-outline-primary"> Resize</a>
+									</div>
+								</li>
+								<li>
+									<div class="testimonial-item">
+										<img src="static/images/testimonial/sketch.svg" alt="icon" class="testimonial-icons">
+										<p>Automatically convert an image to an equivalent pencil sketch, Bye to artists</p>
+										<h6 class="testimonial-author">Pencil Sketch</h6>
+										<a href="#" class="btn btn-outline-primary"> Try now</a>
+									</div>
+								</li>
+								<li>
+									<div class="testimonial-item">
+										<img src="static/images/testimonial/flow.svg" alt="icon" class="testimonial-icons">
+										<p>Transform images by blending, rotating, changing image shapes</p>
+										<h6 class="testimonial-author">Transform</h6>
+										<a href="#" class="btn btn-outline-primary"> Try now</a>
+									</div>
+								</li>
+								<li>
+									<div class="testimonial-item">
+										<img src="static/images/testimonial/filter.svg" alt="icon" class="testimonial-icons">
+										<p>Add filter to images</p>
+										<h6 class="testimonial-author">Filter</h6>
+										<a href="#" class="btn btn-outline-primary"> Try now</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pricing-list" id="plans">
+			<div class="row" >	
+			
+		</div>
+		<div class="row" >	
+			<div class="container ">
+					<div class="col-sm-12 " style="padding-top: 50px;">
+						<div class="d-sm-flex justify-content-between align-items-center mb-2">
+							<div>
+								<h3 class="font-weight-medium text-dark ">Developers</h3>
+								<h5  class="font-weight-medium mb-4" >Try out our Api Rest API</h5>
+							</div>
+							<div class="mb-5 mb-lg-0 mt-3 mt-lg-0">
+								<div class="d-flex align-items-center">
+									<a href="#" class="btn btn-success"> Try REST API</a>
 
-  </section><!-- Intro Hero -->
-
-<!-- Explore unlimited possibility section -->
-<!--
-<section class="intro-section spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="section-title">
-                    <h2>Explore unlimited Image processing possibilities !</h2>
-                    <a class="site-btn">Watch Video <span class="fa fa-youtube-play"></span></a>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <p>IMAGEPLUS is designed specifically to provide users with extra image processing capabilities powered by state-of-the-art artificial intelligence and computer vision techniques. It provides users with features like image resizing, image compression, image background segmentation, image cartooning, image to pencil sketch e.t.c. Listen to one of the creators, Banjo Dayo as he explains how to exploit this useful tool.</p>
-            </div>
-        </div>
-    </div>
-</section>
--->
-<!-- Explore unlimited possibilityend -->
-
-<!-- Feature  Section-->
-{%  include 'features.html'%}
-<!-- Features section  End-->
-
-<!-- Features section -->
-<section class="features-section spad" id="api">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="features-text">
-                    <h2>Api</h2>
-                    <h3>Explore unlimited Image processing possibilities with our api</h3>
-                    <p>IMAGEPLUS is designed specifically to provide users with extra image processing capabilities powered by state-of-the-art artificial intelligence and computer vision techniques. It provides users with features, exploit this useful tool with our api.</p>
-                    <a href="#" class="site-btn">Try Api <span class="fa fa-arrow-right"></span></a>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <ul class="features-list">
-                    <li><span class="fa fa-check-square"> </span> Image Resizing, Enhancement</li>
-                    <li><span class="fa fa-check-square"></span>  Convert Image extension</li>
-                    <li><span class="fa fa-check-square"></span>  Image Cartooning</li>
-                    <li><span class="fa fa-check-square"></span>  Image size compression</li>
-                    <li><span class="fa fa-check-square"></span>  Image to Pencil Sketch</li>
-                    <li><span class="fa fa-check-square"></span>  <a href="/features" style="color: #fc0254">More <span class="fa fa-arrow-right"></span></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- features section end -->
-
-<!-- why section end -->
-<section class="why-section spad" id="why">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="section-title">
-                    <h2>Why Image Plus?</h2>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <p>IMAGEPLUS uniquely stands out above other online image processing applications due to its efficiency, intuitive interface, and usability.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-sm-6">
-                <div class="why-item my-3">
-                    <div><span class="fa fa-lock fa-5x my-2"></span></div>
-                    <h4>Data Privacy Policy</h4>
-                    <p>Your data is fully secure and end-to-end encrypted.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="why-item my-3">
-                    <div><span class="fa fa-image fa-5x my-2"></span></div>
-                    <h4>High Quality</h4>
-                    <p>We proffer high quality services</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="why-item my-3">
-                    <div><span class="fa fa-code fa-5x my-2"></span></div>
-                    <h4>Public REST APIs</h4>
-                    <p>For developers</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="why-item my-3">
-                    <div><span class="fa fa-clock-o fa-5x my-2"></span></div>
-                    <h4>Efficient</h4>
-                    <p>Optimized for all kinds of images</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- why section end -->
-
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>		
+		</section>
+		
+	</div>
 {% include 'footer.html' %}
 {% endblock %}
+<!-- Body Section end -->

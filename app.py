@@ -28,9 +28,10 @@ def index():
 def features():
     return render_template('features.html')
 
+@app.route('/feature', defaults={'feature': 'resize'})
 
-@app.route('/upload-image', methods=['GET', 'POST'])
-def upload():
+@app.route('/upload-image/<string:feature>', methods=['GET', 'POST'])
+def upload(feature):
     if request.method == "POST":
         if request.files:
             file = request.files['image']
@@ -48,12 +49,13 @@ def upload():
                 img = cv2.imread(f)
                 if img is not None:
                     print(img)
-                    edges = basic.pencil_sketch(img)
-                    new_filename = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-                    cv2.imwrite(new_filename, edges)
+                    if feature == 'resize':
+                        edges = basic.pencil_sketch(img)
+                        new_filename = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                        cv2.imwrite(new_filename, edges)
                     return render_template('./utilities/upload.html', filename=filename)
                 else:
-                    print("THis guy is none")    
+                    print("This guy is none")    
     return render_template('./utilities/upload.html')
 '''
 @app.route("/predict", methods=["POST"])
