@@ -1,7 +1,3 @@
-from PIL import Image
-import cv2
-import scipy.ndimage
-import numpy as np
 
 def resize(src, scale=0.5):
     width = int(src.shape[1] * scale)

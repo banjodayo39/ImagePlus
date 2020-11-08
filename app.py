@@ -4,6 +4,7 @@ from flask import Flask, flash, request, redirect, url_for, render_template
 from PIL import Image
 from werkzeug.utils import secure_filename
 import numpy as np
+import cv2
 from features import basic
 
 UPLOAD_FOLDER = 'static/images/'
